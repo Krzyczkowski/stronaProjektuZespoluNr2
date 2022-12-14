@@ -1,0 +1,82 @@
+/* style.css file for positioning and customization website elements */
+.mainContainer{
+    padding:5rem;
+    margin-top:-4rem;
+}
+.logo{
+    display:flex;
+    justify-content: center;
+    flex-flow:row wrap;
+    margin-left:1rem;
+}
+
+nav{
+    color:black;
+    display:flex;
+    justify-content: space-around;
+    margin-bottom:1rem;
+    background-color: #e7e8eb;
+    padding-bottom:1rem;
+    padding-top:1rem;
+    border-radius:0 0 0.5rem 0.5rem;
+}
+
+#oProjekcie{
+    display:flex;
+    justify-content: center;
+    flex-flow: row wrap;
+}
+
+img{
+    border-radius:10px;
+    width: 40rem;
+    margin-top:1rem;
+}
+
+section{
+    margin-left:5rem;
+    margin-right:5rem;
+    border:5px solid white;
+    background-color: #e7e8eb;
+}
+
+ul{
+    margin-left:2rem;
+}
+.h2Container{
+    display:flex;
+    justify-content: center;
+}
+.harmonogramPracyLista{
+    margin-left:4rem;
+}
+.harmonogramPracyLista strong{
+    margin-left:-2rem;
+}
+
+@media only screen and (max-width: 900px) {
+    .logo{
+        display:flex;
+        justify-content: center;
+    }
+    nav{
+        flex-flow: column wrap;
+    }
+    section{
+        margin:0;
+    }
+
+}
+@media only screen and (max-width: 500px) {
+    .logo{
+        display:flex;
+        justify-content: center;
+    }
+    nav{
+        flex-flow: column wrap;
+    }
+    nav h2{
+        font-size:small;
+    }
+
+}

@@ -4,56 +4,153 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.2/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="team_site/style/baseStyle.css">
+    <link rel="stylesheet" href="team_site/style/style.css">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="style/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.2.228/pdf.min.js"></script>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
     <title>Zespół nr 2</title>
 </head>
-<body>
-    <nav>
-        <h1>Zespół nr. 2</h1>
-        <ul>
-            <li>O projekcie</li>
-            <li>Zespół</li>
-            <li>Harmonogram</li>
-            <li>Spotkania</li>
-            <li>Dokumentacja</li>
-        </ul>
+<body class="bg-gray-900" style="font-family: 'Russo One', sans-serif;">
+    <nav class="fixed w-full z-30 top-0 left-0">
+        <div class="logo text-5xl">zespół nr 2</div>
+            <div class="hidden justify-end w-full md:block md:w-auto" id="navi" style="margin-right: 3rem;">
+                <ul class="flex flex-col md:flex-row md:space-x-8  mt-2 ">
+                    <li>
+                        <a href="#oProjekcie" class="block" aria-current="page">Projekt</a>
+                    </li>
+                    <li>
+                        <a href="#zespol"  class="block">Zespół</a>
+                    </li>
+                    <li>
+                        <a href="#harmonogram"  class="block">Harmonogram</a>
+                    </li>
+                    <li>
+                        <a href="#spotkania"  class="block">Spotkania</a>
+                    </li>
+                    <li>
+                        <a href="#dokumentacja"  class="block">Dokumentacja</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </nav>
-    <main>
-        <article class="oProjekcie">
-            <h2>O projekcie</h2>
-            <strong>(Informacje będą aktualizowane na bierząco)</strong>
-            <p>Projekt "zegarka" dla fanów polskiej kolei. </p>
-        </article>
-        <article class="harmonogram">
-            <h2>Harmonogram prac</h2>
-        </article>
-        <article class="zespol">
-            <h2>Nasz zespół</h2>
-            <ul>
-                <li>Prowadzący: Edmund Bejgier</li>
-                <li>Rafał Rogala</li>
-                <li>Dariusz Cichocki</li>
-                <li>Wiktor Krzyczkowski</li>
-                <li>Witold Weiner</li>
-                <li>Radosław Lach</li>
-            </ul>
-        </article>
-        <article class="spotkania">
-            <h2>Lista spotkań</h2>
-            <ul>
-                <li>16.11.22 Pierwsze spotkanie. Zapoznaliśmy się z koncepcją projektu oraz ustaliliśmy w jaki sposób i kiedy będziemy odbywali kolejne spotkania.</li>
-                <li>25.11.22 Spotkanie </li>
-            </ul>
-        </article>
-        <article class="dokumentacja">
-            <h2>Dokumentacja projektu</h2>
-            <a href="#">Link do githuba</a>
-        </article>
-    </main>
-    <footer>
+    <div>
+        <main class="text-2xl">
+            <section class="w-full sm:w-4/5 mt-24 mx-auto justify-center text-black  rounded-3xl sm:p-10 my-10 py-1" id="oProjekcie">
+                <div class="h2Container"><h2 class="text-5xl break-words">Miniaturowa tablica informacji pasażerskiej</h2></div>
+                <img src="/team_site/img/zegarek.png" alt="Little table with departures">
+                <p class="m-10" > Tematem projektu <strong>„Miniaturowa tablica informacji pasażerskiej”</strong> jest przygotowanie kompaktowego wyświetlacza o przekątnej 3-5’’ z mikrokontrolerem wraz z oprogramowania systemu.
+                    W założeniu urządzenie będzie wyświetlało na żywo odjazdy wybranych stacji kolejowych/metra/autobusowych/tramwajowych na własnej, konfigurowalnej miniaturowej tablicy odjazdów.
+                    Urządzenie będzie pobierało dane bezprzewodowo poprzez sieć WiFi. W wyniku realizacji projektu powstanie idealny gadżet do domu lub biura jak i fantastyczny prezent dla wszystkich entuzjastów kolei.
+                    Przedstawiane będą rozkłady jazdy pociągów lub komunikacji miejskiej na żywo w czasie rzeczywistym zgodnym z realnym przystankiem.
+                    Ilość i rodzaj dostępnych informacji zależą od dostępności serwisów API dostarczających dane w trybie on-line. 
+                </p>
+                <ul class="list-disc list-inside m-10 text-start">
+                    <li>Zaprojektowany, aby z niezwykłą szczegółowością symulować prawdziwe tablice odjazdów stacji</li>
+                    <li>Ultra płynna animacja tekstu.</li>
+                    <li>Podgląd odjazdów pociągów / metra / autobusów / tramwajów w czasie rzeczywistym dla wybranych stacji / przystanków​</li>
+                    <li>Informacje o dodatkowych usługach pociągów / metra / autobusów / tramwajów na żywo z rzeczywistych kanałów informacyjnych</li>
+                    <li>Wiele opcji i pełna konfigurowalność za pomocą aplikacji internetowej oraz mobilnej</li>
+                    <li>Aktualizacja oprogramowania on-line</li>
+                    <li>Opcje oszczędzania energii</li>
+                    <li>Łatwa konfiguracja bezprzewodowa</li>
+                    <li>Mały kompaktowy rozmiar, niska moc, Micro USB</li>
+                    <li>Wbudowany głośnik do komunikatów dźwiękowych</li>
+                    <li>Możliwe wprowadzenie płatnych subskrypcji</li>
+                </ul>
+            </section>
+            <div class="container bg-gray-200 mx-auto w-full h-full">
+                <div class="h2Container"><h2 class="text-5xl break-words">Harmonogram pracy</h2></div>
+                <div class="relative wrap overflow-hidden p-10 h-full">
+                    <div class="border-2-2 absolute border-opacity-20 border-gray-700 h-full border" style="left: 50%"></div>
+                    <!-- right timeline -->
+                    <div class="mb-8 flex justify-between items-center w-full right-timeline">
+                        <div class="order-1 w-5/12"></div>
+                        <div class="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-32 h-8 rounded-full">
+                            <h1 class="mx-auto font-semibold text-lg text-white">16.11-9.12</h1>
+                        </div>
+                        <div class="order-1 bg-gray-400 rounded-lg shadow-xl w-5/12 px-6 py-4">
+                            <h3 class="mb-3 font-bold text-gray-800 text-xl">Planowanie</h3>
+                            <p class="text-sm leading-snug tracking-wide text-gray-900 text-opacity-100"> Spotkanie zespołu i przedstawienie założeń projektu. Dostarczenie opisu, założeń i wstępnego planu. Utworzenie szablonu strony www zespołup. Zapoznanie się materiałami projektowymi. Przygotowanie planu projektupon. Publikacja na stronie www zespołu</p>
+                        </div>
+                    </div>
 
+                    <!-- left timeline -->
+                    <div class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
+                        <div class="order-1 w-5/12"></div>
+                        <div class="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-44 h-8 rounded-full">
+                            <h1 class="mx-auto text-white font-semibold text-lg">12.12.22-07.02.23</h1>
+                        </div>
+                        <div class="order-1 bg-red-400 rounded-lg shadow-xl w-5/12 px-6 py-4">
+                            <h3 class="mb-3 font-bold text-white text-xl">Etap 1</h3>
+                            <p class="text-sm font-medium leading-snug tracking-wide text-white text-opacity-100">Elektronika - projekt. Oprogramowanie - design i architektura. Przygotowanie architektury aplikacji. UX/UI design</p>
+                        </div>
+                    </div>
+
+                    <!-- right timeline -->
+                    <div class="mb-8 flex justify-between items-center w-full right-timeline">
+                        <div class="order-1 w-5/12"></div>
+                        <div class="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-32 h-8 rounded-full">
+                            <h1 class="mx-auto font-semibold text-lg text-white">10.02-15.05</h1>
+                        </div>
+                        <div class="order-1 bg-gray-400 rounded-lg shadow-xl w-5/12 px-6 py-4">
+                            <h3 class="mb-3 font-bold text-gray-800 text-xl">Etap 2</h3>
+                            <p class="text-sm leading-snug tracking-wide text-gray-900 text-opacity-100">Wykonanie i walidacja prototypu. Wykonanie prototypu. FAI i walidacja prototypu. Oprogramowanie - implementacja, wdrożenie i testy. Baza Danych. Implementacja modułów aplikacji. Front-End i UX/UI. Zakończenie etapu II</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <section class="w-full sm:w-4/5 mx-auto sm:p-10 my-10 py-1 justify-center bg-gradient-to-r rounded-3xl text-black" id="zespol">
+                <div class="h2Container"><h2 class="text-5xl break-words">Nasz zespół</h2></div>
+                <ul class="m-5 text-start">
+                    <li>Prowadzący: Edmund Bejgier</li>
+                    <li>Rafał Rogala</li>
+                    <li>Dariusz Cichocki</li>
+                    <li>Wiktor Krzyczkowski</li>
+                    <li>Witold Weiner</li>
+                    <li>Radosław Lach</li>
+                </ul>
+            </section>
+            <section class="w-full sm:w-4/5 mx-auto sm:p-10 my-10 py-1 justify-center bg-gradient-to-r  rounded-3xl text-black" id="spotkania">
+                <div class="h2Container"><h2 class="text-5xl break-words">Lista spotkań</h2></div>
+                <ol class="m-5 text-start">
+                    <li>16.11.22 <strong>Spotkanie stacjonarne</strong> Zapoznaliśmy się z koncepcją projektu oraz ustaliliśmy w jaki sposób i kiedy będziemy odbywali kolejne spotkania.</li>
+                    <li>25.11.22 <strong>Spotkanie on-line</strong> Spotkanie organizujące podział pracy</li>
+                </ol>
+            </section>
+            <section class="w-full sm:w-4/5 mx-auto sm:p-10 my-10 py-1 justify-center bg-gradient-to-r  rounded-3xl text-black" id="dokumentacja">
+                <div class="h2Container"><h2 class="text-5xl break-words">Dokumentacja projektu</h2></div>
+                <a class="m-5 text-start" href="https://github.com/rrnax/Miniaturowa_tablica_informacji_pasazerskiej">Link do githuba</a>
+            </section>
+        </main>
+    </div>
+    <footer class="bg-gray-100 text-center">
+        <div class="text-center text-gray-700 p-4" style="background-color: rgba(0, 0, 0, 0.2);">
+            Projekt Zespołowy UMK , DWR
+
+            <button id="show-pdf-button">Show PDF</button> 
+
+            <div id="pdf-main-container" style="width:100rem">
+                <div id="pdf-loader">Loading document ...</div>
+                <div id="pdf-contents">
+                    <div id="pdf-meta">
+                        <div id="pdf-buttons">
+                            <button id="pdf-prev">Previous</button>
+                            <button id="pdf-next">Next</button>
+                        </div>
+                        <div id="page-count-container">Page <div id="pdf-current-page"></div> of <div id="pdf-total-pages"></div></div>
+                    </div>
+                    <canvas id="pdf-canvas" style="width:40%;"></canvas>
+                    <div id="page-loader">Loading page ...</div>
+                </div>
+            </div>
+                <script src="team_site/scripts/pdf-viewer.js"></script>
+        </div>
     </footer>
 </body>
 </html>
